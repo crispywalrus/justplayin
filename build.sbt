@@ -2,11 +2,11 @@ import sbtprotobuf.{ProtobufPlugin=>PB}
 
 seq(PB.protobufSettings: _*)
 
-organization := "com.example"
+organization := "net.crispywalrus"
 
 name := "justplayin"
 
-version := "0.1.0-SNAPSHOT"
+version := "0.1.1-SNAPSHOT"
 
 libraryDependencies ++= Seq(
   "net.databinder" %% "unfiltered-filter" % "0.5.3",
