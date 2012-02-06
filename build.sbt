@@ -2,6 +2,8 @@ import sbtprotobuf.{ProtobufPlugin=>PB}
 
 seq(PB.protobufSettings: _*)
 
+seq(appengineSettings: _*)
+
 organization := "net.crispywalrus"
 
 name := "justplayin"
@@ -14,7 +16,8 @@ libraryDependencies ++= Seq(
   "org.clapper" %% "avsl" % "0.3.6",
   "net.databinder" %% "unfiltered-spec" % "0.5.3" % "test",
   "org.squeryl" %% "squeryl" % "0.9.5-RC1",
-  "mysql" % "mysql-connector-java" % "5.1.18"
+  "mysql" % "mysql-connector-java" % "5.1.18",
+  "org.mortbay.jetty" % "jetty" % "6.1.22" % "container"
 )
 
 resolvers ++= Seq(
