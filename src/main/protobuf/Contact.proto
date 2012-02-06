@@ -1,0 +1,19 @@
+package contacts;
+
+message Name {
+  required string first = 1;
+  required string last = 2;
+  required string handle = 3;
+}
+
+message User {
+  required int32 id = 1;
+  required Name name = 2;
+}
+
+enum TestaliciousType {
+  TEST = 0;
+  SUPER_TEST=1;
+  SUPER_DUPER_TEST=2;
+}
+
