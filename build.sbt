@@ -8,7 +8,9 @@ libraryDependencies ++= Seq(
   "net.databinder" %% "unfiltered-filter" % "0.5.3",
   "net.databinder" %% "unfiltered-jetty" % "0.5.3",
   "org.clapper" %% "avsl" % "0.3.6",
-  "net.databinder" %% "unfiltered-spec" % "0.5.3" % "test"
+  "net.databinder" %% "unfiltered-spec" % "0.5.3" % "test",
+  "org.squeryl" %% "squeryl" % "0.9.5-RC1"
+  "mysql" %% "mysql-connector-java" % "5.1.18"
 )
 
 resolvers ++= Seq(
