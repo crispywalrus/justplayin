@@ -1,8 +1,17 @@
-import sbtprotobuf.{ProtobufPlugin=>PB}
 
-seq(PB.protobufSettings: _*)
+seq(protobufSettings: _*)
 
 seq(appengineSettings: _*)
+
+seq(liquibaseSettings: _*)
+
+liquibaseUsername := "liqui" 
+
+liquibasePassword := "base"
+
+liquibaseDriver := "com.mysql.jdbc.Driver"
+
+liquibaseUrl := "jdbc:mysql://localhost:3306/justplayindb"
 
 organization := "net.crispywalrus"
 

@@ -1,0 +1,8 @@
+package model.prosody;
+
+
+message Poem {
+  required int32 id=1;
+  required string name=2;
+  required int32 createor=3;
+}
