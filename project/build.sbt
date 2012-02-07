@@ -3,7 +3,9 @@ resolvers ++= Seq("gseitz@github" at "http://gseitz.github.com/maven/",
 
 addSbtPlugin("com.github.gseitz" % "sbt-protobuf" % "0.2.2")
 
-addSbtPlugin("atd" % "sbt-liquibase" % "0.3")
+// addSbtPlugin("atd" % "sbt-liquibase" % "0.3")
 
-addSbtPlugin("com.eed3si9n" % "sbt-appengine" % "0.3.1")
+// addSbtPlugin("com.eed3si9n" % "sbt-appengine" % "0.3.1")
+
+// addSbtPlugin("me.lessis" % "coffeescripted-sbt" % "0.2.1")
 
