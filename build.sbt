@@ -26,7 +26,8 @@ libraryDependencies ++= Seq(
   "net.databinder" %% "unfiltered-spec" % "0.5.3" % "test",
   "org.squeryl" %% "squeryl" % "0.9.5-RC1",
   "mysql" % "mysql-connector-java" % "5.1.18",
-  "org.mortbay.jetty" % "jetty" % "6.1.22" % "container"
+  "org.mortbay.jetty" % "jetty" % "6.1.22" % "container",
+  "org.scalaz" %% "scalaz-core" % "6.0.4"
 )
 
 resolvers ++= Seq(
