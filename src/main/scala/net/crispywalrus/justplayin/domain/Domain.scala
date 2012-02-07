@@ -17,13 +17,23 @@ case class User(firstName:String,lastName:String,handle:String,email:String) ext
   def this(email:String,handle:String) = this("","",handle,email)
 }
 
+case class SocialNetworkLink(snUserId:String,userId:Long) extends DomainModel {
+//  def this(snUserId:String,user:User) = this(snUserId,user.id)
+}
+
 object schema extends Schema {
 
-  val users = table[User]
+  val users  = table[User]
+  val snLink = table[SocialNetworkLink]
 
   on(users)(user => declare(
     user.id is (autoIncremented),
     user.email is (unique),
     user.handle is (unique)
+  ))
+
+  on(snLink)(snLink => declare(
+    snLink.id is (autoIncremented),
+    snLink.snUserId is (unique)
   ))
 }

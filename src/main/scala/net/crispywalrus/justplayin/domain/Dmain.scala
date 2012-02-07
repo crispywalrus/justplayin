@@ -13,9 +13,9 @@ object Dmain {
   def main(args: Array[String]) {
     createDbSession("jdbc:mysql://localhost:3306/justplayindb?user=liqui&password=base",new MySQLInnoDBAdapter)
 
-    // transaction {
-    //   schema.create
-    // }
+    transaction {
+      schema.create
+    }
 
     inTransaction {
       try {
