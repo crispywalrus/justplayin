@@ -1,4 +1,4 @@
-package com.example
+package net.crispywalrus.justplayin
 
 import unfiltered.request._
 import unfiltered.response._
