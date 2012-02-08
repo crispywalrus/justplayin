@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app>
 
+  <listener>
+    <listener-class>net.crispywalrus.justplayin.app.Boot</listener-class>
+  </listener>
+
   <filter>
     <filter-name>justplayin</filter-name>
-    <filter-class>net.crispywalrus.justplayin.web.App</filter-class>
+    <filter-class>net.crispywalrus.justplayin.web.filter.EntityRepository</filter-class>
   </filter>
 
   <filter-mapping>
     <filter-name>justplayin</filter-name>
-    <url-pattern>/*</url-pattern>
+    <url-pattern>/repo/*</url-pattern>
   </filter-mapping>
 
 </web-app>

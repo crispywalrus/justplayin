@@ -4,6 +4,7 @@ resolvers ++= Seq("gseitz@github" at "http://gseitz.github.com/maven/"
 
 addSbtPlugin("com.github.gseitz" % "sbt-protobuf" % "0.2.2")
 
+
 libraryDependencies <+= sbtVersion(v => "com.github.siasia" %% "xsbt-web-plugin" % (v+"-0.2.10"))
 
 

@@ -3,7 +3,7 @@ package net.crispywalrus.justplayin.web
 import unfiltered.request._
 import unfiltered.response._
 
-import org.clapper.avsl.Logger
+import grizzled.slf4j.Logger
 
 /** unfiltered plan */
 class App extends unfiltered.filter.Plan {
