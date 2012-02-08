@@ -1,11 +1,9 @@
-resolvers ++= Seq("gseitz@github" at "http://gseitz.github.com/maven/",
-                  "bigtoast-github" at "http://bigtoast.github.com/repo/")
+
+resolvers ++= Seq("gseitz@github" at "http://gseitz.github.com/maven/"
+                  , "saisai" at "http://siasia.github.com/maven2" )
 
 addSbtPlugin("com.github.gseitz" % "sbt-protobuf" % "0.2.2")
 
-// addSbtPlugin("atd" % "sbt-liquibase" % "0.3")
+libraryDependencies <+= sbtVersion(v => "com.github.siasia" %% "xsbt-web-plugin" % (v+"-0.2.10"))
 
-// addSbtPlugin("com.eed3si9n" % "sbt-appengine" % "0.3.1")
-
-// addSbtPlugin("me.lessis" % "coffeescripted-sbt" % "0.2.1")
 

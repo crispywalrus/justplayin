@@ -1,4 +1,4 @@
-package net.crispywalrus.justplayin
+package net.crispywalrus.justplayin.web
 
 import unfiltered.request._
 import unfiltered.response._
@@ -39,7 +39,7 @@ class App extends unfiltered.filter.Plan {
      <html>
       <head>
         <title>uf example</title>
-        <link rel="stylesheet" type="text/css" href="/assets/css/app.css"/>
+        <link rel="stylesheet" type="text/css" href="/css/app.css"/>
       </head>
       <body>
        <div id="container">
@@ -57,15 +57,15 @@ class App extends unfiltered.filter.Plan {
 }
 
 /** embedded server */
-object Server {
-  val logger = Logger(Server.getClass)
-  def main(args: Array[String]) {
-    val http = unfiltered.jetty.Http.anylocal // this will not be necessary in 0.4.0
-    http.context("/assets") { _.resources(new java.net.URL(getClass().getResource("/www/css"), ".")) }
-      .filter(new App).run({ svr =>
-        unfiltered.util.Browser.open(http.url)
-      }, { svr =>
-        logger.info("shutting down server")
-      })
-  }
-}
+// object Server {
+//   val logger = Logger(Server.getClass)
+//   def main(args: Array[String]) {
+//     val http = unfiltered.jetty.Http.anylocal // this will not be necessary in 0.4.0
+//     http.context("/assets") { _.resources(new java.net.URL(getClass().getResource("/www/css"), ".")) }
+//       .filter(new App).run({ svr =>
+//         unfiltered.util.Browser.open(http.url)
+//       }, { svr =>
+//         logger.info("shutting down server")
+//       })
+//   }
+// }
