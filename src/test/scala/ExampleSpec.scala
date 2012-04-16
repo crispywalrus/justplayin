@@ -1,4 +1,4 @@
-package com.example
+package net.crispywalrus.justplayin.web
 
 import org.specs._
 

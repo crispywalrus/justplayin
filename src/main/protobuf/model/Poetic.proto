@@ -1,8 +1,13 @@
 package model.prosody;
 
+option java_generic_services = true;
 
 message Poem {
   required int32 id=1;
   required string name=2;
   required int32 createor=3;
-}
+};
+
+service PoeticService {
+  rpc Search(Poem) returns (Poem);
+};
